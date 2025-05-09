@@ -18,6 +18,8 @@
             overflow: hidden;
             font-family: 'Poppins';
             color: #fff;
+            scroll-behavior: smooth;
+            overflow-y: scroll;
         }
         #canvas {
             position: fixed;
@@ -101,51 +103,37 @@
             width: 75%;
             animation: progress 2s ease-in-out infinite;
         }
-        .contact-number {
-            position: relative;
-            padding: 15px 30px;
-            margin-top: 3.5%;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            animation: float 3s ease-in-out infinite;
-            color: #fff;
-        }
-        .contact-number:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 20px rgba(78, 205, 196, 0.3);
-        }
-        .contact-number i {
-            animation: pulse 2s infinite;
-            color: #4ecdc4;
-        }
-        .contact-number a {
-            font-size: 1.2rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            background: linear-gradient(45deg, white, #4ecdc4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all 0.3s ease;
-        }
-        .contact-number a:hover {
-            transform: translateY(-2px);
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
         @keyframes progress {
             0% { width: 0%; }
             50% { width: 75%; }
             100% { width: 0%; }
+        }
+        .contact-number {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .contact-number:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .contact-number i {
+            font-size: 1.2rem;
+            color: #4ecdc4;
+        }
+        .contact-number a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
         @media (max-width: 768px) {
             .logo-img {
@@ -228,7 +216,7 @@
         <p class="lead">Our website is currently under maintenance. We'll be back soon with exciting new features!</p>
         <div class="contact-number mb-4">
             <i class="fas fa-phone-alt me-2"></i>
-            <a href="tel:+201021207777" class="text-decoration-none">+20 10 21207777</a>
+            <a href="tel:+201021207777" class="text-white text-decoration-none">+20 10 21207777</a>
         </div>
         <div class="social-links">
             <a href="https://www.instagram.com/vision.studio.egypt?igsh=MWdxZXFoYWR6cmkwbw=="><i class="fab fa-instagram"></i></a>
